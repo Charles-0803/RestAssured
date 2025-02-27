@@ -9,7 +9,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PutRequestTest {
     @Test
-    public void updateUser(){
+    @Story("Update an existing user's details")  // Relates to a user story
+    @Severity(SeverityLevel.CRITICAL)  // Marks the severity of the test
+    @Description("This test verifies that a PUT request updates an existing user's details successfully and returns status code 200.")
+    @TmsLink("TMS-78901")  // Link to Test Management System
+    @Issue("JIRA-7890")  // Links to a bug tracking system if applicable
+    @Link(name = "API Docs", url = "https://reqres.in/")
+    public void updateUser() {
         String updateBody = "{"
                 + "\"name\": \"Alice Johnson\","
                 + "\"job\": \"Senior QA Engineer\","
