@@ -7,6 +7,8 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@Epic("User Management API")  // High-level category
+@Feature("Update User")  // Specific feature under the epic
 public class PutRequestTest {
     @Test
     @Story("Update an existing user's details")  // Relates to a user story
