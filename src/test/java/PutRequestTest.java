@@ -40,6 +40,8 @@ public class PutRequestTest {
                 .body("city", equalTo("San Francisco"))
                 .extract().response();
 
+        attachResponse(response.asString()); // Attaching response to Allure report
+
         assertEquals(200, response.statusCode(), "Expected status code is 200");
         assertTrue(response.asString().contains("Senior QA Engineer"), "Response should contain 'Senior QA Engineer'");
     }
