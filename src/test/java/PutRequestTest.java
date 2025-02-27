@@ -45,4 +45,9 @@ public class PutRequestTest {
         assertEquals(200, response.statusCode(), "Expected status code is 200");
         assertTrue(response.asString().contains("Senior QA Engineer"), "Response should contain 'Senior QA Engineer'");
     }
+
+    @Attachment(value = "Response Body", type = "application/json")
+    public String attachResponse(String response) {
+        return response;
+    }
 }
